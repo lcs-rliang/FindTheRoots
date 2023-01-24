@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4CBCB76C298018BF00AFD815 /* FindTheRootsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB76B298018BF00AFD815 /* FindTheRootsApp.swift */; };
-		4CBCB76E298018BF00AFD815 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB76D298018BF00AFD815 /* ContentView.swift */; };
 		4CBCB770298018C200AFD815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBCB76F298018C200AFD815 /* Assets.xcassets */; };
 		4CBCB773298018C200AFD815 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBCB772298018C200AFD815 /* Preview Assets.xcassets */; };
+		4CBCB77B2980191400AFD815 /* RootsCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */; };
+		4CBCB77D2980267B00AFD815 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB77C2980267B00AFD815 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CBCB768298018BF00AFD815 /* FindTheRoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheRoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBCB76B298018BF00AFD815 /* FindTheRootsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheRootsApp.swift; sourceTree = "<group>"; };
-		4CBCB76D298018BF00AFD815 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CBCB76F298018C200AFD815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CBCB772298018C200AFD815 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootsCalculatorView.swift; sourceTree = "<group>"; };
+		4CBCB77C2980267B00AFD815 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				4CBCB76B298018BF00AFD815 /* FindTheRootsApp.swift */,
-				4CBCB76D298018BF00AFD815 /* ContentView.swift */,
+				4CBCB77E2980267F00AFD815 /* Model */,
+				4CBCB779298018F800AFD815 /* Views */,
 				4CBCB76F298018C200AFD815 /* Assets.xcassets */,
 				4CBCB771298018C200AFD815 /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				4CBCB772298018C200AFD815 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CBCB779298018F800AFD815 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CBCB77E2980267F00AFD815 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCB77C2980267B00AFD815 /* Result.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CBCB76E298018BF00AFD815 /* ContentView.swift in Sources */,
+				4CBCB77D2980267B00AFD815 /* Result.swift in Sources */,
+				4CBCB77B2980191400AFD815 /* RootsCalculatorView.swift in Sources */,
 				4CBCB76C298018BF00AFD815 /* FindTheRootsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
