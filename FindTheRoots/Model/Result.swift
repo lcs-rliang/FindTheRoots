@@ -15,7 +15,7 @@ struct Result: Identifiable {
     let roots: String
 }
 
-let resultForPrewiews = Result(a: 1,
+let resultForPreviews = Result(a: 1,
                                b:-6,
-                               c:8,
-                               roots:"x ≈ 2.00 and x ≈ 4.00")
+                               c: 8,
+                               roots: "x ≈ 2.00 and x ≈ 4.00")

@@ -19,7 +19,7 @@ struct RootsCalculatorView: View {
     // MARK: Computed Properties
     
     // The result possibilities are:
-    // 1. DIscriminant is negatice, no real roots
+    // 1. Discriminant is negative, no real roots
     // 2. Discriminant is zero, so two equal real roots
     // 3. Discriminant is positive, so two different real roots
     var result: String {
@@ -35,13 +35,13 @@ struct RootsCalculatorView: View {
             return "x ≈ \(x1.formatted(.number.precision(.fractionLength(2)))) and x ≈ \(x2.formatted(.number.precision(.fractionLength(2))))"
         }
     }
-    //?
+    
     var body: some View {
         VStack{
             
             HStack{
                 Text("Find the Roots")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
                 
                 Spacer()
@@ -124,19 +124,29 @@ struct RootsCalculatorView: View {
                     .fontWeight(.bold)
                 Spacer()
             }
+            .padding(.leading, 20.0)
+            
             
             //The actual list of results
-            List(priorResults)
+            List(priorResults.reversed() ) { currentResult in
+                HStack{
+                    Spacer()
+                    ResultView(somePriorResult: currentResult)
+                    Spacer()
+                }
+            }
+            .padding()
+            .navigationTitle("Find the Roots")
+            
         }
-        .padding()
-        .navigationTitle("Find the Roots")
-        
     }
+    
+    struct RootsCalculatorView_Previews: PreviewProvider {
+        static var previews: some View {
+            RootsCalculatorView()
+        }
+    }
+    
 }
 
-struct RootsCalculatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootsCalculatorView()
-    }
-}
 
