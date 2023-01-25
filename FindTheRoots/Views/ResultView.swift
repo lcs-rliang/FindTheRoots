@@ -17,8 +17,13 @@ struct ResultView: View {
         VStack(spacing: 10) {
             
             //Input values
-            HStack(spacing: 30) {
-                Text("a = \(somePriorResult.a.formatted(.number.precision(.fractionLength(2)))), b = \(somePriorResult.b.formatted(.number.precision(.fractionLength(2)))), c = \(somePriorResult.c.formatted(.number.precision(.fractionLength(2))))")
+            HStack {
+              
+                NumberView(label: "a =", value: somePriorResult.a, precision: 1)
+                
+                NumberView(label: "b =", value: somePriorResult.b, precision: 2)
+                
+                NumberView(label: "c =", value: somePriorResult.c, precision: 3)
             }
             
             Text(somePriorResult.roots)

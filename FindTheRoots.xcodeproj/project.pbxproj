@@ -13,6 +13,7 @@
 		4CBCB77B2980191400AFD815 /* RootsCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */; };
 		4CBCB77D2980267B00AFD815 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB77C2980267B00AFD815 /* Result.swift */; };
 		4CBCB78029802AB600AFD815 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB77F29802AB600AFD815 /* ResultView.swift */; };
+		4CBCB79D2981A09A00AFD815 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB79C2981A09A00AFD815 /* NumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootsCalculatorView.swift; sourceTree = "<group>"; };
 		4CBCB77C2980267B00AFD815 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4CBCB77F29802AB600AFD815 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		4CBCB79C2981A09A00AFD815 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				4CBCB77A2980191400AFD815 /* RootsCalculatorView.swift */,
 				4CBCB77F29802AB600AFD815 /* ResultView.swift */,
+				4CBCB79C2981A09A00AFD815 /* NumberView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				4CBCB77D2980267B00AFD815 /* Result.swift in Sources */,
 				4CBCB78029802AB600AFD815 /* ResultView.swift in Sources */,
 				4CBCB77B2980191400AFD815 /* RootsCalculatorView.swift in Sources */,
+				4CBCB79D2981A09A00AFD815 /* NumberView.swift in Sources */,
 				4CBCB76C298018BF00AFD815 /* FindTheRootsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
