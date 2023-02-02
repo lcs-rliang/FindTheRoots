@@ -10,9 +10,9 @@ import SwiftUI
 struct RootsCalculatorView: View {
     // MARK: Stored Properties
     
-    @State var a: Double = 10
-    @State var b: Double = 10
-    @State var c: Double = 10
+    @State var givenA = "10"
+    @State var givenB = "10"
+    @State var givenC = "10"
     
     // List of prior results
     @State var priorResults: [Result] = []
@@ -22,19 +22,45 @@ struct RootsCalculatorView: View {
     // 1. Discriminant is negative, no real roots
     // 2. Discriminant is zero, so two equal real roots
     // 3. Discriminant is positive, so two different real roots
-    var result: String {
-        
-        let discriminant = b * b - 4 * a * c
-        
-        if discriminant < 0 {
-            return "No real roots."
-        } else{
-            let x1 = (b * -1 - discriminant.squareRoot() ) / (2 * a)
-            let x2 = (b * -1 + discriminant.squareRoot() ) / (2 * a)
-            
-            return "x ≈ \(x1.formatted(.number.precision(.fractionLength(2)))) and x ≈ \(x2.formatted(.number.precision(.fractionLength(2))))"
+    
+    var givenAAsDouble: Double? {
+        guard let a = Double(givenA) else {
+            return nil
         }
+        return a
     }
+    
+    var discriminant: Double? {
+        
+        // Try to convert provided a to a Double
+        guard let a = givenAAsDouble else {
+            // Can't be done..
+            // We can't calculate roots...
+            // Return a nil for the roots value instead...
+            return nil
+        }
+        
+        // Try to convert provided b to a Double
+        guard let b = Double(givenB) else {
+            // Can't be done..
+            // We can't calculate roots...
+            // Return a nil for the roots value instead...
+            return nil
+        }
+        
+        // Try to convert provided c to a Double
+        guard let c = Double(givenC) else {
+            // Can't be done..
+            // We can't calculate area...
+            // Return a nil for the roots value instead...
+            return nil
+        }
+        
+        // We have a valid a, b and c values, so return the roots
+        // return length * width
+        
+    }
+    
     
     var body: some View {
         VStack{
@@ -68,9 +94,7 @@ struct RootsCalculatorView: View {
                                           size: 24.0,
                                           relativeTo: .body))
                     
-                    Slider(value: $a,
-                           in: -50...50,
-                           label: {Text( "variation a")})
+                    TextField("Enter an a value", text: $givenA)
                 }
                 
                 VStack{
@@ -140,6 +164,8 @@ struct RootsCalculatorView: View {
             
         }
     }
+    
+}
     
     struct RootsCalculatorView_Previews: PreviewProvider {
         static var previews: some View {
